@@ -113,11 +113,11 @@ class OpenCallbacks {
 /// Check if a file is a valid database file
 ///
 /// An empty file is a valid empty sqlite file
-Future<bool> isDatabase(String path) async {
+Future<bool> isDatabase(String path, {String password}) async {
   Database db;
   bool isDatabase = false;
   try {
-    db = await openReadOnlyDatabase(path);
+    db = await openReadOnlyDatabase(path, password: password);
     int version = await db.getVersion();
     if (version != null) {
       isDatabase = true;

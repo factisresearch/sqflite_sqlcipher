@@ -4,7 +4,7 @@ publish_to: none
 version: '0.1.0'
 
 environment:
-  sdk: ">=2.1.0-dev <3.0.0"
+  sdk: '>=2.5.0 <3.0.0'
 
 dependencies:
   path: any
@@ -12,9 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   sqflite:
-    git:
-      url: git://github.com/tekartik/sqflite
-      path: sqflite
+    path: ../
 
 
 dev_dependencies:
@@ -45,6 +43,7 @@ flutter:
   #  - images/a_dot_ham.jpeg
   assets:
     - assets/example.db
+    - assets/example_pass_1234.db
     - assets/issue_64.db
 
 dependency_overrides:

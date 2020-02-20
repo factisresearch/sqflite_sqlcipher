@@ -281,6 +281,7 @@ abstract class OpenDatabaseOptions {
       OnDatabaseVersionChangeFn onUpgrade,
       OnDatabaseVersionChangeFn onDowngrade,
       OnDatabaseOpenFn onOpen,
+      String password,
       bool readOnly = false,
       bool singleInstance = true}) {
     return impl.SqfliteOpenDatabaseOptions(
@@ -290,6 +291,7 @@ abstract class OpenDatabaseOptions {
         onUpgrade: onUpgrade,
         onDowngrade: onDowngrade,
         onOpen: onOpen,
+        password: password,
         readOnly: readOnly,
         singleInstance: singleInstance);
   }
@@ -313,6 +315,8 @@ abstract class OpenDatabaseOptions {
 
   /// Called after all other callbacks have been called.
   OnDatabaseOpenFn onOpen;
+  /// Database password (optional)
+  String password;
 
   /// Open the database in read-only mode (no callback called).
   bool readOnly;

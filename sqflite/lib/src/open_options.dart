@@ -13,6 +13,7 @@ class SqfliteOpenDatabaseOptions implements OpenDatabaseOptions {
     this.onUpgrade,
     this.onDowngrade,
     this.onOpen,
+    this.password,
     this.readOnly = false,
     this.singleInstance = true,
   }) {
@@ -31,6 +32,8 @@ class SqfliteOpenDatabaseOptions implements OpenDatabaseOptions {
   OnDatabaseVersionChangeFn onDowngrade;
   @override
   OnDatabaseOpenFn onOpen;
+  @override
+  String password;
   @override
   bool readOnly;
   @override

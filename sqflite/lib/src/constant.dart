@@ -92,6 +92,9 @@ const String paramVersion = 'version';
 /// The database id (int)
 const String paramId = 'id';
 
+/// When opening the database (String) (optional)
+const String paramPassword = "password";
+
 /// True if the database is in a transaction
 const String paramInTransaction = 'inTransaction';
 
